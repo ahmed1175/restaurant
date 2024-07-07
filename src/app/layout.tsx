@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/Component/Nav";
+import Footer from "@/Component/footer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className=" bg-black">
+      <body className={inter.className  }>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

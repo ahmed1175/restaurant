@@ -2,32 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+ 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .GoldButton {
+    @apply bg-gold py-3 px-10 motion-reduce:transform-none hover:scale-110 duration-300 text-[14px] uppercase hover:rounded-lg rounded-lg border-gold hover:duration-300   hover:bg-black hover:text-white transition-all border-2;
   }
+  .bigText{
+    @apply text-[35px]  leading-[48px] text-center text-white z-10
+  }
+  .extratext{
+    @apply text-[40px] leading-[48px] text-start text-white 
+
+  }
+  
+  .smallText{
+    @apply w-[90%] text-white  text-[16px] leading-[24px] text-center m-2
+  }
+  .midText{
+    @apply text-[21px] leading-[48px] text-start text-white 
+  }
+}
+ 
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 4s linear infinite;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color:#a6a6a6;
+}
+::-webkit-scrollbar-track {
+  background: #212529;
+  
+}
+::-webkit-scrollbar-thumb {
+  background: #e4c590;
 }
