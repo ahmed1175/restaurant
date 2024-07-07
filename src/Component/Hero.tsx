@@ -32,7 +32,7 @@ const Hero = () => {
         />
         <div
           className=" absolute p-4 pt-5 flex justify-start animate-spin duration-300 z-0 m-3 mx-9 r-3 rounded-sm  border-2 border-gold   "
-          width={400} 
+        
         >
           sada
         </div>
