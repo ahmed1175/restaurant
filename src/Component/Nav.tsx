@@ -39,7 +39,7 @@ const MainSection = () => {
           {NavLi.map((item) => {
             return (
               <ul
-                key={item}
+                key={item.title}
                 className="cursor-pointer hidden md:flex  text-white text-center duration-200 transition-all hover:border-b-4 hover:text-gold border-double border-gold"
               >
                 <li className="">{item.title}</li>
